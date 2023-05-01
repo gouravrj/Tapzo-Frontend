@@ -1,0 +1,34 @@
+<app-nav></app-nav>
+<div class="container mt-4">
+  <div class="row mt-4">
+      <div class="col-12">
+          <!-- <div class="card shadow mb-4" *ngFor="let post of postData"> -->
+          <div class="card shadow mb-4" *ngFor="let bike of bikeData">
+              <div class="card-header bg-primary text-white">
+                  <h3>{{ bike.bikeName }}</h3>
+              </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-12 bg-info text-white">
+                          <div class="row">
+                              <div class="col-6">{{ bike.lenderId.displayName }}</div>
+                              <div class="col-6 text-end">Bike Price (Hour/Day):- {{bike.priceHour}}/{{bike.priceDay}}</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6">{{bike.bikeDesc}}</div>
+                            <div class="col-6 text-end">{{ bike.bikeImgUrl }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-end">
+                  <a routerLink="/bike/book/{{bike.priceDay}}" class="btn btn-outline-info">BOOK</a>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
